@@ -1,0 +1,125 @@
+.main-slider
+	&__list
+		position: relative
+
+		font-family: "Roboto"
+	&__item
+		position: relative
+	&__h2
+		position: absolute
+		top: 130px
+		left: 0
+		right: 0
+		margin: 0 auto
+		text-align: center
+
+		font-size: 40px
+		color: #fff
+		font-weight: bold
+		text-transform: uppercase
+	&__hr
+		position: absolute
+		top: 186px
+		left: 0
+		right: 0
+		margin: 0 auto
+		text-align: center
+
+		background: #fff
+		width: 291px
+		height: 1px
+	&__p
+		position: absolute
+		top: 212px
+		left: 0
+		right: 0
+		margin: 0 auto
+		text-align: center
+
+		color: #fff
+		max-width: 450px
+	&__btn
+		position: absolute
+		top: 307px
+		left: 0
+		right: 0
+		margin: 0 auto
+		text-align: center
+		color: rgb(255, 255, 255)
+		text-transform: uppercase
+
+		border: 1px solid #ff3333
+		width: 135px
+		height: 37px
+
+		font-size: 14px
+		line-height: 35px
+
+.main-slider__list .slick
+	&-list
+		overflow: hidden
+
+	&-track
+		display: flex
+		height: 465px
+
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(47, 47, 47, 0.329)
+			transition: all .3s ease
+
+	&-arrow
+		position: absolute
+		top: 50%
+		z-index: 99
+		font-size: 0
+		width: 20px
+		height: 40px
+		border: 0
+		outline: 0
+		&.slick-prev
+			left: 10%
+			background: url(../img/arrow-left.svg) no-repeat
+		&.slick-next
+			right: 10%
+			background: url(../img/arrow-right.svg) no-repeat
+
+	&-dots
+		display: flex
+		align-items: center
+		justify-content: center
+
+		position: absolute
+		bottom: 40px
+		left: 0
+		right: 0
+		margin: 0 auto
+		li
+			margin: 0 5px
+
+			&.slick-active
+				button:before
+					content: ""
+					position: absolute
+					top: 1px
+					left: 0
+					right: 0
+					margin: 0 auto
+					width: 11px
+					height: 11px
+					background-color: rgb(235, 70, 68)
+
+		button
+			position: relative
+			background: url(../img/border.svg)
+			width: 15px
+			height: 15px
+			font-size: 0
+			border: 1px solid #fff
+			outline: none
+
