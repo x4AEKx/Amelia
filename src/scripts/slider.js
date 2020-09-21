@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 	$('.main-slider__list').slick({
 		slidesToShow: 1,
 		dots: true,

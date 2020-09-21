@@ -1,15 +1,23 @@
-const mainMenuLinks = document.querySelectorAll(".main-menu__link")
-const mainMenuItems = document.querySelectorAll(".main-menu__item")
-const dropdown = document.querySelector(".dropdown")
+$(function() {
+	$(".main-menu__link").on("click", function(e) {
+		e.preventDefault()
 
-mainMenuItems.forEach((mainMenuItem) => {
-	mainMenuItem.addEventListener("click", function() {
-		if (dropdown.classList.contains("show") && mainMenuItem.classList.contains("highlight")) {
-			dropdown.classList.remove("show")
-			mainMenuItem.classList.remove("highlight")
-		} else {
-			dropdown.classList.add("show")
-			mainMenuItem.classList.add("highlight")
-		}
+		$(".main-menu__item").removeClass("highlight")
+		$(".dropdown").removeClass("show")
+
+		$(this).parent().addClass("highlight")
+		$($(this).attr("href")).addClass("show")
+	})
+
+	$(".link-search").on("click", function(e) {
+		e.preventDefault()
+
+		console.log(e.target)
+
+		$(".search__item").removeClass("highlight")
+		$(".link-search__list").removeClass("show")
+
+		$(this).parent().addClass("highlight")
+		$($(this).attr("href")).addClass("show")
 	})
 })
